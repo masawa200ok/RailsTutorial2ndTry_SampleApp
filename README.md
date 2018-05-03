@@ -32,7 +32,7 @@ $ rails test
 
 テストが無事に通ったら、Railsサーバーを[…]
 
-“```
+```
 $ rails server
 ```
 
