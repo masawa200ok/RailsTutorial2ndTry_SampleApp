@@ -1,15 +1,11 @@
 <% provide(:title, "Edit user") %>
-<% provide(:url,   edit_user_path) %>
+<% provide(:url,   user_path) %>
 <% provide(:btn,   "Save changes") %>
 <h1>Update your profile</h1>
 
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
-    <%= form_for(@user, url: yield(:url)) do |f| %>
-      <%= render "shared/error_messages" %>
-      <%= render "shared/submit_form" %>
-    <% end %>
-
+    <%= render "shared/submit_form" %>
     <div class="gravatar_edit">
       <%= gravatar_for @user %>
       <a href="http://gravatar.com/emails" target="_blank" rel="noopener">change</a>
