@@ -83,7 +83,6 @@ Rails.application.configure do
   if ENV["RAILS_LOG_TO_STDOUT"].present?
     logger           = ActiveSupport::Logger.new(STDOUT)
     logger.formatter = config.log_formatter
-    B
     config.logger    = ActiveSupport::TaggedLogging.new(logger)
   end
 
@@ -98,8 +97,10 @@ Rails.application.configure do
     :address              => "smtp.sendgrid.net",
     :port                 => "587",
     :authentication       => :plain,
-    :user_name            => "app95460134@heroku.com",
-    :password             => "wle3xzv30888",
+    #:user_name            => "app95460134@heroku.com",
+    #:password             => "wle3xzv30888",
+    :user_name            => ENV["SENDGRID_USERNAME"],
+    :password             => ENV["SENDGRID_PASSWORD"],
     :domain               => "heroku.com",
     :enable_starttls_auto => true
   }
