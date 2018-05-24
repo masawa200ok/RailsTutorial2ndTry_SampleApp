@@ -24,3 +24,6 @@
 
 # Ignore Sprint files.
 spring/
+
+# アップロードされたテスト画像を無視する
+/public/uploads
